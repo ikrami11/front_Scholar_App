@@ -27,7 +27,7 @@ const routes = [
       
       {
         path: "icons",
-          name: "Administration _ Chercher Un Etudiant",
+          name: "Administration _ Rechercher Un Etudiant",
           component: Recherche
       },
       

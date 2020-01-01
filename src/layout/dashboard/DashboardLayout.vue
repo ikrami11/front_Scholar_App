@@ -4,7 +4,7 @@
       <template slot="links">
         <sidebar-link to="/dashboard" name="Authentification" icon="ti-lock" />
         <sidebar-link to="/stats" name="Accueil" icon="ti-tablet" />
-        <sidebar-link to="/icons" name="Chercher Etudiant" icon="ti-user" />
+        <sidebar-link to="/icons" name="Rechercher Etudiant" icon="ti-user" />
         <sidebar-link to="/table-list" name="Permuter Etudiants" icon="ti-arrows-horizontal" />
 
       </template>
