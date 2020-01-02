@@ -9,35 +9,47 @@ import Recherche from "@/pages/Recherche.vue";
 import TableList from "@/pages/TableList.vue";
 
 const routes = [
-  {
-    path: "/",
-    component: DashboardLayout,
-    redirect: "/dashboard",
-    children: [
-      {
-        path: "dashboard",
-        name: "Authentification",
-        component: Auth
-      },
-      {
-        path: "stats",
-        name: "Administration _ Accueil",
-          component: Accueil
-      },
-      
-      {
-        path: "icons",
-          name: "Administration _ Rechercher Un Etudiant",
-          component: Recherche
-      },
-      
-      {
-        path: "table-list",
-          name: "Administration _ Permuter etudiants",
-        component: TableList
-      }
-    ]
-  },
+    {
+        path: "/",
+        component: DashboardLayout,
+        redirect: "/dashboard",
+        children: [
+            {
+                path: "dashboard",
+                name: "Authentification",
+                component: Auth
+            },
+            {
+                path: "stats",
+                name: "Administration _ Accueil",
+                component: Accueil
+            },
+
+            {
+                path: "icons",
+                name: "Administration _ Rechercher Un Etudiant",
+                component: Recherche
+            },
+
+            {
+                path: "table-list",
+                name: "Administration _ Permuter etudiants",
+                component: TableList
+            }
+        ]
+    },
+    {
+      path: "/",
+        component: Auth,
+        redirect: "/login",
+        children: [
+            {
+                path: "login",
+                name: "Authentification",
+                component: Auth
+            },
+        ]
+    },
   { path: "*", component: NotFound }
 ];
 
