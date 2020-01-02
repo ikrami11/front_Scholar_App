@@ -3,7 +3,7 @@
 
     <!--Stats cards-->
     <div class="row">
-    <h1>Bienvenue cher administrateur sur notre plateforme Scholar</h1>
+    <h2>Cher administrateur, bienvenue sur la plateforme Scholar !</h2>
     <img src="http://www.goudsmit-tang-management.com/wp-content/uploads/2018/12/conseil-administration-actionnaires-goudsmit-tang-management.jpg" />
     </div>
 
