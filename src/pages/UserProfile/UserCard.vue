@@ -56,11 +56,13 @@
   },
   methods: {
     switchStudents() {
-      axios.post('http://127.0.0.1:8000/api/permut', this.student);
+      //axios.post('http://127.0.0.1:8000/api/permut', this.student);
       if (this.student.first) {
         if (this.student.second) {
           alert("Les deux étudiants : " + JSON.stringify(this.student.first) + " and " + JSON.stringify(this.student.second) + " ont été permuté avec success!");
-          axios.post('http://127.0.0.1:8000/permutEtd', this.student);
+          axios.post('http://127.0.0.1:8000/api/permutEtd', this.student)
+            .then(res => { console.log(res); })
+          .catch(err => { console.log(err);})
         } else { alert("Remplissez les champs!");}
       }else { alert("Remplissez les champs!");}
     }
