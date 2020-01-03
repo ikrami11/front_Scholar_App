@@ -8,6 +8,6 @@
     "\\pages\\UserProfile",
     "\\router"
   ],
-  "SelectedNode": "\\router\\routes.js",
+  "SelectedNode": "\\layout\\dashboard\\DashboardLayout.vue",
   "PreviewInSolutionExplorer": false
 }

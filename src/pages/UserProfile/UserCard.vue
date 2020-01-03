@@ -1,7 +1,7 @@
 <template>
   <card class="card" title="Permuter Etudiants">
     <div>
-      <form @submit.prevent>
+      <form  action="http://127.0.0.1:8081/table-list" method="post">
 
 
 
@@ -12,7 +12,7 @@
             <fg-input type="text"
                       label="Etudiant 1" 
                       placeholder="Entrez le matricule"
-                      v-model="student.first">
+                      v-model="etudiant.first">
             </fg-input>
           </div>
           <div class="col-md-2">
@@ -23,7 +23,7 @@
             <fg-input type="text"
                       label="Etudiant 2"
                       placeholder="Entrez le matricule"
-                      v-model="student.second">
+                      v-model="etudiant.second">
             </fg-input>
           </div>
         </div>
@@ -48,7 +48,7 @@
     
   data() {
     return {
-      student: {
+      etudiant: {
         first: "",
         second:""
       }
@@ -57,10 +57,10 @@
   methods: {
     switchStudents() {
       //axios.post('http://127.0.0.1:8000/api/permut', this.student);
-      if (this.student.first) {
-        if (this.student.second) {
-          alert("Les deux étudiants : " + JSON.stringify(this.student.first) + " and " + JSON.stringify(this.student.second) + " ont été permuté avec success!");
-          axios.post('http://127.0.0.1:8000/api/permutEtd', this.student)
+      if (this.etudiant.first) {
+        if (this.etudiant.second) {
+          alert("Les deux étudiants : " + JSON.stringify(this.etudiant.first) + " and " + JSON.stringify(this.etudiant.second) + " ont été permuté avec success!");
+          axios.post('http://127.0.0.1:8000/api/permutEtd', this.etudiant)
             .then(res => { console.log(res); })
           .catch(err => { console.log(err);})
         } else { alert("Remplissez les champs!");}
