@@ -26,19 +26,23 @@
   </card>
 </template>
 <script>
+
+import axios from 'axios';
+
 export default {
   data() {
     return {
       user: {
         
-        matricule: "",
+        est: "",
         
       }
     };
   },
   methods: {
     updateProfile() {
-      alert("Your data: " + JSON.stringify(this.user));
+      axios.post('http://127.0.0.1:10080/api/rechmat', this.student);
+      alert("Le nom de l'étudiant recherché: " + JSON.stringify(this.user));
     }
   }
 };
