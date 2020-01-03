@@ -11,7 +11,7 @@
       <div class="logo">
         <a href="#" class="simple-text">
           <div class="logo-img">
-            <img src="@/assets/img/vue-logo.png" alt="">
+            <img src="https://image.flaticon.com/icons/png/512/49/49944.png" alt="">
         </div>
       {{title}}
     </a>
