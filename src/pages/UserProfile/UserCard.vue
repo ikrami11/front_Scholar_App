@@ -33,7 +33,8 @@
           <p-button type="info"
                     round
                     @click.native.prevent="switchStudents">
-           Change
+           <!--Change-->
+            Permuter
           </p-button>
         </div>
         <div class="clearfix"></div>
@@ -42,16 +43,26 @@
   </card>
 </template>
 <script>
-export default {
+  import axios from 'axios';
+  export default {
+    
   data() {
     return {
       student: {
-        switchStudents() { }
+        first: "",
+        second:""
       }
     };
   },
   methods: {
-    
+    switchStudents() {
+      axios.post('http://127.0.0.1:8000/api/permut', this.student);
+      if (this.student.first) {
+        if (this.student.second) {
+          alert("Les deux étudiants : " + JSON.stringify(this.student.first) + " and " + JSON.stringify(this.student.second) + " ont été permuté avec success!");
+        } else { alert("Remplissez les champs!");}
+      }else { alert("Remplissez les champs!");}
+    }
   }
 };
 </script>
