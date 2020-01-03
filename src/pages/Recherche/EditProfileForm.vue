@@ -41,8 +41,10 @@ export default {
   },
   methods: {
     updateProfile() {
-      axios.post('http://127.0.0.1:10080/api/rechmat', this.info);
-      alert("Informations étudiant : " + JSON.stringify(this.user));
+      axios.post('http://127.0.0.1:10080/api/rechmat', this.user.info);
+      
+      alert("Informations étudiant : " + JSON.stringify(this.user.info));
+
     }
   }
 };
