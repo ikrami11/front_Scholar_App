@@ -34,15 +34,15 @@ export default {
     return {
       user: {
         
-        est: "",
+      sont : "",
         
       }
     };
   },
   methods: {
     updateProfile() {
-      axios.post('http://127.0.0.1:10080/api/rechmat', this.student);
-      alert("Le nom de l'étudiant recherché: " + JSON.stringify(this.user));
+      axios.post('http://127.0.0.1:10080/api/rechmat', this.sont);
+      alert("Les données de l'étudiant : " + JSON.stringify(this.user));
     }
   }
 };
